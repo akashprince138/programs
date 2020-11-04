@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Convert a decimal number to binary</title>
+</head>
+<body>
+  <input type="number" id="number" name="number" placeholder="Enter number" />
+<input type="button" onclick="changeDecimalToBinary();" value="check" />
+</body>
+<script>
+  function changeDecimalToBinary(){
+    var binaryArr = [];
+    var decimalNumber = document.getElementById("number").value;
+    while(decimalNumber > 0){
+      var reminder = decimalNumber % 2;
+      binaryArr.push(reminder);
+      console.log('reminder', reminder);
+      decimalNumber = decimalNumber/2;
+      console.log('decimalNumber', decimalNumber);
+    }
+    console.log('binaryArr', binaryArr);
+  }
+</script>
+</html>
