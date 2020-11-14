@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Convert a binary to decimal number </title>
+</head>
+
+<body>
+  <input type="number" id="number" name="number" placeholder="Enter binary number" />
+  <input type="button" onclick="changeBinaryToDecimal();" value="check" />
+  <div id="decimal"></div>
+</body>
+<script>
+  function changeBinaryToDecimal() {
+    var sum =0;
+    var reminder = 0;
+    var binaryNumber = document.getElementById("number").value;
+    binaryNumber = binaryNumber.split('').reverse();
+    for(var i = 0; i < binaryNumber.length; i++){
+      sum = sum + parseInt(binaryNumber[i])* Math.pow(2, i);
+    }
+    document.getElementById('decimal').innerHTML = 'decimal number is: ' + sum;
+  }
+</script>
+
+</html>

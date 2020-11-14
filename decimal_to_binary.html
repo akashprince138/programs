@@ -8,6 +8,7 @@
 <body>
   <input type="number" id="number" name="number" placeholder="Enter number" />
 <input type="button" onclick="changeDecimalToBinary();" value="check" />
+<div id="binary"></div>
 </body>
 <script>
   function changeDecimalToBinary(){
@@ -16,11 +17,10 @@
     while(decimalNumber > 0){
       var reminder = parseInt(decimalNumber % 2);
       binaryArr.push(reminder);
-      // console.log('reminder', reminder);
       decimalNumber = parseInt(decimalNumber/2);
-      // console.log('decimalNumber', decimalNumber);
     }
-    console.log('binary', binaryArr.join(""));
+    const binary = binaryArr.reverse().join("");
+    document.getElementById('binary').innerHTML = 'binary number is: '+ binary;
   }
 </script>
 </html>
