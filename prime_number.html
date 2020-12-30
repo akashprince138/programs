@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pattern</title>
+</head>
+
+<body>
+  <input type="number" id="number" name="number" placeholder="Enter max prime number which will start with 2" />
+  <input type="button" onclick="primeNumber();" value="check" />
+</body>
+<script>
+  function primeNumber() {
+    var primeNumber = document.getElementById("number").value;
+    for (var i = 2; i <= primeNumber; i++) {
+      for (var j = 2; j <=i; j++) {
+        if (i == j) {
+          document.write(i+',');
+        }
+        if(i%j==0){
+          break;
+        }
+      }
+    }
+  }
+</script>
+
+</html>
